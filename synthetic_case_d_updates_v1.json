@@ -1,0 +1,51 @@
+{
+  "scenario_id": "case-d-later-observation-v1",
+  "base_dataset_id": "cedarpay-triage-fixtures-v1",
+  "base_case_id": "D",
+  "base_as_of": "2026-09-30T10:00:00+03:00",
+  "scenario_notice": "Two alternative fictional branches. Apply only one branch at a time to the original dataset. No live DNS, page, or redirect check occurred; capture references describe synthetic fixtures, not real screenshots.",
+  "branches": [
+    {
+      "branch_id": "dns_only",
+      "as_of": "2026-09-30T11:10:00+03:00",
+      "new_observations": [
+        {
+          "observation_id": "O-D-DNS-LATER",
+          "case_id": "D",
+          "check_type": "dns_resolution",
+          "status": "observed",
+          "evidence_code": "hostname_resolves",
+          "observed_at": "2026-09-30T11:05:00+03:00",
+          "recorded_at": "2026-09-30T11:06:00+03:00",
+          "source_type": "synthetic_authorized_check",
+          "source_ref": "fixture:DNS-D-02",
+          "target_scope": "verify-cedarpay.example from fictional vantage V1",
+          "finding": "The fictional hostname resolved during this check.",
+          "limitation": "DNS resolution does not show that /login or any lookalike page is reachable."
+        }
+      ]
+    },
+    {
+      "branch_id": "redirect_to_lookalike",
+      "as_of": "2026-09-30T11:10:00+03:00",
+      "new_observations": [
+        {
+          "observation_id": "O-D-REDIRECT-LATER",
+          "case_id": "D",
+          "check_type": "page_navigation",
+          "status": "observed",
+          "evidence_code": "redirect_to_brand_lookalike_login",
+          "observed_at": "2026-09-30T11:05:00+03:00",
+          "recorded_at": "2026-09-30T11:06:00+03:00",
+          "source_type": "synthetic_authorized_check",
+          "source_ref": "fixture:REDIRECT-D-02",
+          "redirect_target_url": "https://session-cedarpay.example/login",
+          "target_capture_ref": "fixture:CAP-D-02",
+          "target_scope": "https://verify-cedarpay.example/login from fictional vantage V1; documented redirect to https://session-cedarpay.example/login",
+          "finding": "The fictional exact path returned a redirect. A simulated time-stamped capture of the destination depicts a CedarPay lookalike login form.",
+          "limitation": "No form submission, credential collection, victim impact, distribution scale, or reason for the infrastructure change was observed."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "scenario_id": "b-plus-rapid-distribution-v1",
+  "purpose": "Alex-approved outcome for this comparison only; not a universal delivery threshold and not ranking-engine input.",
+  "as_of": "2026-09-30T10:00:00+03:00",
+  "expected_cases": [
+    {
+      "case_id": "B",
+      "scenario_label": "B+",
+      "expected_band": "review_now",
+      "relative_order": "before_A",
+      "reason": "A documented, recent delivery of the exact link to 300 distinct fictional recipients increases potential near-term exposure; page reachability and behavior remain unverified.",
+      "still_unknown": ["page_reachability", "page_capture", "clicks", "form_submission_behavior"]
+    },
+    {
+      "case_id": "A",
+      "scenario_label": "A unchanged",
+      "expected_band": "review_now",
+      "relative_order": "after_B_plus",
+      "reason": "The suspicious page is documented and reachable, but this comparison has no distribution evidence for A.",
+      "still_unknown": ["form_submission_behavior", "current_distribution"]
+    }
+  ],
+  "cross_case_expectations": [
+    "A and B+ both remain review_now; only their within-band order changes from the original A/B fixture.",
+    "The B+ distribution observation is added without overwriting B's two original reports.",
+    "The tool must not infer clicks, confirmed phishing, credential harvesting, or victim impact from delivery telemetry.",
+    "The 300-delivery figure is an example fact, not a globally approved policy threshold."
+  ]
+}

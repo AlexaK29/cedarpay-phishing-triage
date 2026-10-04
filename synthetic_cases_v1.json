@@ -1,0 +1,182 @@
+{
+  "dataset_id": "cedarpay-triage-fixtures-v1",
+  "fictional_brand": "CedarPay",
+  "as_of": "2026-09-30T10:00:00+03:00",
+  "data_notice": "All reports, people, URLs, observations, and times are fictional. No live site was checked. A capture record describes a synthetic fixture; it does not reference a real screenshot.",
+  "cases": [
+    {
+      "case_id": "A",
+      "brand_id": "cedarpay",
+      "target_url": "https://secure-cedarpay.example/verify",
+      "opened_at": "2026-09-30T09:35:00+03:00",
+      "grouping_reason": "One report for this exact fictional page"
+    },
+    {
+      "case_id": "B",
+      "brand_id": "cedarpay",
+      "target_url": "https://account-cedarpay.example/verify",
+      "opened_at": "2026-09-30T09:49:00+03:00",
+      "grouping_reason": "Two distinct synthetic sources reported the same exact fictional page"
+    },
+    {
+      "case_id": "C",
+      "brand_id": "cedarpay",
+      "target_url": "https://cedarpay-security.example/account",
+      "opened_at": "2026-09-30T09:20:00+03:00",
+      "grouping_reason": "One report for this exact fictional page"
+    },
+    {
+      "case_id": "D",
+      "brand_id": "cedarpay",
+      "target_url": "https://verify-cedarpay.example/login",
+      "opened_at": "2026-09-27T09:00:00+03:00",
+      "grouping_reason": "One report for this exact fictional page"
+    },
+    {
+      "case_id": "E",
+      "brand_id": "cedarpay",
+      "target_url": "https://update-cedarpay.example/verify",
+      "opened_at": "2026-09-30T09:46:00+03:00",
+      "grouping_reason": "One report for this exact fictional page"
+    }
+  ],
+  "reports": [
+    {
+      "report_id": "R-A-01",
+      "case_id": "A",
+      "received_at": "2026-09-30T09:35:00+03:00",
+      "source_id": "fictional-customer-01",
+      "claim_category": "suspected_brand_impersonation",
+      "reported_url": "https://secure-cedarpay.example/verify",
+      "claim_text": "A CedarPay lookalike page asks me to verify my account.",
+      "brand_id": "cedarpay"
+    },
+    {
+      "report_id": "R-B-01",
+      "case_id": "B",
+      "received_at": "2026-09-30T09:49:00+03:00",
+      "source_id": "fictional-customer-02",
+      "claim_category": "suspected_brand_impersonation",
+      "reported_url": "https://account-cedarpay.example/verify",
+      "claim_text": "The link appears active and asks me to verify my account.",
+      "brand_id": "cedarpay"
+    },
+    {
+      "report_id": "R-B-02",
+      "case_id": "B",
+      "received_at": "2026-09-30T09:54:00+03:00",
+      "source_id": "fictional-customer-03",
+      "claim_category": "suspected_brand_impersonation",
+      "reported_url": "https://account-cedarpay.example/verify",
+      "claim_text": "I received a CedarPay verification link that looks suspicious.",
+      "brand_id": "cedarpay"
+    },
+    {
+      "report_id": "R-C-01",
+      "case_id": "C",
+      "received_at": "2026-09-30T09:20:00+03:00",
+      "source_id": "fictional-customer-04",
+      "claim_category": "suspected_brand_impersonation",
+      "reported_url": "https://cedarpay-security.example/account",
+      "claim_text": "This page might imitate CedarPay, but I did not capture it.",
+      "brand_id": "cedarpay"
+    },
+    {
+      "report_id": "R-D-01",
+      "case_id": "D",
+      "received_at": "2026-09-27T09:00:00+03:00",
+      "source_id": "fictional-customer-05",
+      "claim_category": "suspected_brand_impersonation",
+      "reported_url": "https://verify-cedarpay.example/login",
+      "claim_text": "I saw a CedarPay lookalike login page.",
+      "brand_id": "cedarpay"
+    },
+    {
+      "report_id": "R-E-01",
+      "case_id": "E",
+      "received_at": "2026-09-30T09:46:00+03:00",
+      "source_id": "fictional-customer-06",
+      "claim_category": "suspected_brand_impersonation",
+      "reported_url": "https://update-cedarpay.example/verify",
+      "claim_text": "I think this CedarPay verification link may be suspicious.",
+      "brand_id": "cedarpay"
+    }
+  ],
+  "observations": [
+    {
+      "observation_id": "O-A-CAPTURE",
+      "case_id": "A",
+      "check_type": "page_capture",
+      "status": "observed",
+      "evidence_code": "brand_lookalike_login_capture",
+      "observed_at": "2026-09-30T09:38:00+03:00",
+      "recorded_at": "2026-09-30T09:39:00+03:00",
+      "source_type": "synthetic_capture_description",
+      "source_ref": "fixture:CAP-A-01",
+      "target_scope": "https://secure-cedarpay.example/verify",
+      "finding": "A simulated time-stamped capture depicts a CedarPay lookalike login form.",
+      "limitation": "No form submission, destination, credential collection, or victim impact was observed."
+    },
+    {
+      "observation_id": "O-A-REACH",
+      "case_id": "A",
+      "check_type": "page_reachability",
+      "status": "observed",
+      "evidence_code": "exact_page_reachable",
+      "observed_at": "2026-09-30T09:42:00+03:00",
+      "recorded_at": "2026-09-30T09:43:00+03:00",
+      "source_type": "synthetic_authorized_check",
+      "source_ref": "fixture:REACH-A-01",
+      "target_scope": "https://secure-cedarpay.example/verify from fictional vantage V1",
+      "finding": "The exact page was reachable at the stated time in this fictional check.",
+      "limitation": "Reachability does not establish form behavior or continuing availability."
+    },
+    {
+      "observation_id": "O-D-CAPTURE",
+      "case_id": "D",
+      "check_type": "page_capture",
+      "status": "observed",
+      "evidence_code": "brand_lookalike_login_capture",
+      "observed_at": "2026-09-27T09:02:00+03:00",
+      "recorded_at": "2026-09-27T09:05:00+03:00",
+      "source_type": "synthetic_capture_description",
+      "source_ref": "fixture:CAP-D-01",
+      "target_scope": "https://verify-cedarpay.example/login",
+      "finding": "A simulated capture depicts a CedarPay lookalike login form.",
+      "limitation": "The capture is three days old and does not establish current availability or credential collection."
+    },
+    {
+      "observation_id": "O-D-REACH",
+      "case_id": "D",
+      "check_type": "page_reachability",
+      "status": "checked_not_found",
+      "evidence_code": "exact_path_404",
+      "observed_at": "2026-09-30T09:40:00+03:00",
+      "recorded_at": "2026-09-30T09:41:00+03:00",
+      "source_type": "synthetic_authorized_check",
+      "source_ref": "fixture:REACH-D-01",
+      "target_scope": "https://verify-cedarpay.example/login from fictional vantage V1",
+      "finding": "A completed fictional HTTP check returned 404 for this exact page from V1 at the stated time.",
+      "limitation": "This does not establish that other paths or vantage points were unreachable."
+    },
+    {
+      "observation_id": "O-E-REACH",
+      "case_id": "E",
+      "check_type": "page_reachability",
+      "status": "check_failed",
+      "evidence_code": "reachability_check_timeout",
+      "observed_at": "2026-09-30T09:52:00+03:00",
+      "recorded_at": "2026-09-30T09:53:00+03:00",
+      "source_type": "synthetic_authorized_check",
+      "source_ref": "fixture:REACH-E-01",
+      "target_scope": "https://update-cedarpay.example/verify from fictional vantage V1",
+      "check_context": {
+        "vantage_id": "V1",
+        "vantage_region": "fictional-Israel",
+        "failure_phase": "unknown"
+      },
+      "finding": "The fictional checking tool returned a timeout before a usable result.",
+      "limitation": "The timeout is not evidence that the page was reachable or unreachable."
+    }
+  ]
+}

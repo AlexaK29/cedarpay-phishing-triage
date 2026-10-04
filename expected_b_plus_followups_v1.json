@@ -1,0 +1,17 @@
+{
+  "scenario_id": "b-plus-followups-v1",
+  "expectations": [
+    {
+      "branch_id": "two_timeouts",
+      "recommendation_band": "review_now",
+      "reachability_status": "check_failed",
+      "analyst_decision": null
+    },
+    {
+      "branch_id": "two_valid_404s",
+      "recommendation_band": "review_now",
+      "reachability_status": "checked_not_found",
+      "analyst_decision_band": "review_today"
+    }
+  ]
+}

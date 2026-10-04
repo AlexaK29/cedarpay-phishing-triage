@@ -1,0 +1,88 @@
+{
+  "scenario_id": "b-plus-followups-v1",
+  "base_dataset_id": "cedarpay-triage-fixtures-v1",
+  "base_case_id": "B",
+  "as_of": "2026-09-30T10:06:00+03:00",
+  "notice": "Alternative, fully fictional authorized checks of one exact .example path. Apply one branch at a time. No network request or VPN check was performed.",
+  "branches": [
+    {
+      "branch_id": "two_timeouts",
+      "new_observations": [
+        {
+          "observation_id": "O-B-TIMEOUT-V1",
+          "case_id": "B",
+          "check_type": "page_reachability",
+          "status": "check_failed",
+          "evidence_code": "reachability_check_timeout",
+          "observed_at": "2026-09-30T10:02:00+03:00",
+          "recorded_at": "2026-09-30T10:02:30+03:00",
+          "source_type": "synthetic_authorized_check",
+          "source_ref": "fixture:REACH-B-TIMEOUT-V1",
+          "target_scope": "https://account-cedarpay.example/verify from fictional authorized vantage V1",
+          "check_context": {"vantage_id": "V1", "failure_phase": "unknown"},
+          "finding": "The fictional check timed out before a usable HTTP result.",
+          "limitation": "No conclusion about page availability, content, or geographic filtering."
+        },
+        {
+          "observation_id": "O-B-TIMEOUT-V2",
+          "case_id": "B",
+          "check_type": "page_reachability",
+          "status": "check_failed",
+          "evidence_code": "reachability_check_timeout",
+          "observed_at": "2026-09-30T10:04:00+03:00",
+          "recorded_at": "2026-09-30T10:04:30+03:00",
+          "source_type": "synthetic_authorized_check",
+          "source_ref": "fixture:REACH-B-TIMEOUT-V2",
+          "target_scope": "https://account-cedarpay.example/verify from fictional authorized vantage V2",
+          "check_context": {"vantage_id": "V2", "failure_phase": "unknown"},
+          "finding": "A second fictional check timed out before a usable HTTP result.",
+          "limitation": "Two failed attempts still do not establish that the page is down."
+        }
+      ]
+    },
+    {
+      "branch_id": "two_valid_404s",
+      "new_observations": [
+        {
+          "observation_id": "O-B-404-V1",
+          "case_id": "B",
+          "check_type": "page_reachability",
+          "status": "checked_not_found",
+          "evidence_code": "exact_path_404",
+          "observed_at": "2026-09-30T10:02:00+03:00",
+          "recorded_at": "2026-09-30T10:02:30+03:00",
+          "source_type": "synthetic_authorized_check",
+          "source_ref": "fixture:REACH-B-404-V1",
+          "target_scope": "https://account-cedarpay.example/verify from fictional authorized vantage V1",
+          "check_context": {"vantage_id": "V1", "http_status": 404, "redirect_observed": false},
+          "finding": "A completed fictional HTTP check returned 404 for the exact path without redirect.",
+          "limitation": "The result is scoped to the exact path, time, and vantage V1."
+        },
+        {
+          "observation_id": "O-B-404-V2",
+          "case_id": "B",
+          "check_type": "page_reachability",
+          "status": "checked_not_found",
+          "evidence_code": "exact_path_404",
+          "observed_at": "2026-09-30T10:04:00+03:00",
+          "recorded_at": "2026-09-30T10:04:30+03:00",
+          "source_type": "synthetic_authorized_check",
+          "source_ref": "fixture:REACH-B-404-V2",
+          "target_scope": "https://account-cedarpay.example/verify from fictional authorized vantage V2",
+          "check_context": {"vantage_id": "V2", "http_status": 404, "redirect_observed": false},
+          "finding": "A second completed fictional HTTP check returned 404 for the exact path without redirect.",
+          "limitation": "The result does not rule out other paths, later changes, or access from other vantages."
+        }
+      ],
+      "analyst_decision": {
+        "decision_id": "DEC-B-404-01",
+        "case_id": "B",
+        "decided_at": "2026-09-30T10:07:00+03:00",
+        "analyst_id": "fictional-analyst-01",
+        "chosen_band": "review_today",
+        "chosen_order": null,
+        "rationale": "After reviewing the 300 deliveries recorded at 09:50-09:58 and two independent valid 404 results for the exact path at 10:02 and 10:04, I move this fictional case to same-day review. The fixture has no later delivery or click evidence; this does not prove delivery stopped, the campaign ended, or the page is inaccessible elsewhere. Reopen immediately if new suspicious content, redirects, or distribution are observed."
+      }
+    }
+  ]
+}

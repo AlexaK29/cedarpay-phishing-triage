@@ -1,0 +1,31 @@
+{
+  "package": "cedarpay-synthetic-triage-v1",
+  "sha256": {
+    ".gitattributes": "8b9c3028d6467ff3be7c793141927841d70f47f52d0590677438f488ca154992",
+    ".gitignore": "70e4e8ce8ccce60899b1d83c444b5d7e14fc157dd2d8ce73cca23c05b3b6e137",
+    ".nojekyll": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "ARCHITECTURE.md": "307f54fa1278d46ec3134db88dcf4e95263b90747784189ac777a64e33835352",
+    "Alex_B_Plus_404s.html": "da072d31bad4ebb5463b1c20b03b4eda4c4f561871288d56714f287d5dcb0acf",
+    "Alex_B_Plus_404s_Then_Timeout.html": "b7bb23564648c219694b1ea09853352383ebdc098a79ed0a069ca61eee7da90d",
+    "Alex_B_Plus_Investigation_View.html": "06cd7d2b180e1e02f213e15c69eead13c46c06219ef2c1d877ac05aeb2b7e441",
+    "Alex_B_Plus_Timeouts.html": "9a76da5142c47490d1e2e474dbe253c7501dc92d2fae40ceffad286e6f98d431",
+    "README.md": "89d7f9b5400e59a9e8f1120e4b0f946131c515ab0880dbd21b62fc285bc7fba8",
+    "build_investigation_view.py": "a7646b8cd438edba6cb52dc32fbdbd8815650f502a87067566574b202799f5b4",
+    "check_investigation_view.mjs": "cb42a29cd26d02d8cdaa494df0a63249673a559cc6144f67bc061415a95d0f58",
+    "expected_b_plus_distribution_v1.json": "b12e9e1599c5df0e8ee3caaa22a3216c2d513450e0c02aeaf4133cc4c31cd89e",
+    "expected_b_plus_followups_v1.json": "f51c0e4587dd3d1649d932a7ebe22484de8d3c94f9c77c8774ab15fd50b4145b",
+    "expected_b_plus_reassessment_v1.json": "ea2aeebdef83e821745db73797b1445797380a02b67fe90348fa9b2de8c4b656",
+    "expected_case_d_updates_v1.json": "38b44f46e3bdb16cc4141485e182e3cf51d1c7a9ddca0e174d96d9185151ee1e",
+    "expected_outcomes_v1.json": "d77163ac1be85991cc7995bf648a6dbce166d4c979978ad0af5460d9e741284a",
+    "index.html": "06cd7d2b180e1e02f213e15c69eead13c46c06219ef2c1d877ac05aeb2b7e441",
+    "investigation_view_template.html": "1ca8b2b6f3bdc4f14d57a62e3ef9c1c37c6f1d6f13a6d79cf7051da38f04ccd4",
+    "synthetic_b_plus_distribution_v1.json": "b313c199a2f81216907e05ecd1ad6e6db55a772a4d2e4a6b6662a6af8bf5344d",
+    "synthetic_b_plus_followups_v1.json": "1fbc0f57647f58627071a6ac78d3df1ab9cba161729868888f4ee1bf0a430a24",
+    "synthetic_b_plus_reassessment_v1.json": "ccdc2626f1269eea4ba998ef08b6669719a0c7dfcb4e5022d7841a051c203e3b",
+    "synthetic_case_d_updates_v1.json": "dabf6d7321ff8a106b81bc79e16327dcc184dbde295ac58b9e3d63eae5314592",
+    "synthetic_cases_v1.json": "09add368e5f30bbff3409aa4fc213ba32a0a7f5b6d4f93b350cd098133c476eb",
+    "triage_b_plus_followup_demo.py": "151a3aa671b9c267b10f11ced7ce9355843f1c3b39a8ed389a16cf424dc96ad5",
+    "triage_b_plus_reassessment_demo.py": "854502e155e0b24d9c2c9284326aaff51c50ddb16b84be8e62ab244f4c1fb307",
+    "triage_queue_demo.py": "eb799b5147df517f92c2f78ac21849cfa778120e813358d45e4e762e16ef578a"
+  }
+}

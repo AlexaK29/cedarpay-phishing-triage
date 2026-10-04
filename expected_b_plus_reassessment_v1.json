@@ -1,0 +1,15 @@
+{
+  "scenario_id": "b-plus-reassessment-v1",
+  "recommendation_band": "review_now",
+  "effective_band_until_reassessment": "review_today",
+  "latest_reachability_status": "check_failed",
+  "decision_review_status": "reassessment_needed",
+  "trigger_observation_id": "O-B-POST-404-TIMEOUT-V3",
+  "retained_observation_ids": [
+    "O-B-DISTRIBUTION-PLUS",
+    "O-B-404-V1",
+    "O-B-404-V2",
+    "O-B-POST-404-TIMEOUT-V3"
+  ],
+  "retained_decision_id": "DEC-B-404-01"
+}

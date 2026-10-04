@@ -1,0 +1,21 @@
+{
+  "scenario_id": "b-plus-reassessment-v1",
+  "base_branch_id": "two_valid_404s",
+  "as_of": "2026-09-30T10:12:00+03:00",
+  "notice": "Fully fictional later check after the two-404 analyst decision. No live page was accessed.",
+  "new_observation": {
+    "observation_id": "O-B-POST-404-TIMEOUT-V3",
+    "case_id": "B",
+    "check_type": "page_reachability",
+    "status": "check_failed",
+    "evidence_code": "reachability_check_timeout",
+    "observed_at": "2026-09-30T10:10:00+03:00",
+    "recorded_at": "2026-09-30T10:10:30+03:00",
+    "source_type": "synthetic_authorized_check",
+    "source_ref": "fixture:REACH-B-POST-404-TIMEOUT-V3",
+    "target_scope": "https://account-cedarpay.example/verify from fictional authorized vantage V3",
+    "check_context": {"vantage_id": "V3", "failure_phase": "unknown"},
+    "finding": "A later fictional check timed out before returning a usable HTTP result.",
+    "limitation": "The failed check does not establish page availability, scanner filtering, or a change since the two earlier 404s."
+  }
+}

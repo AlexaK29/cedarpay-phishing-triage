@@ -1,0 +1,50 @@
+{
+  "dataset_id": "cedarpay-triage-fixtures-v1",
+  "purpose": "Human-approved example outcomes for future acceptance tests. This file is not ranking-engine input.",
+  "as_of": "2026-09-30T10:00:00+03:00",
+  "expected_cases": [
+    {
+      "case_id": "A",
+      "expected_band": "review_now",
+      "relative_order": "before_B",
+      "reason": "A suspicious lookalike form is documented and this exact page was recently reachable in a separate fictional check.",
+      "still_unknown": ["form_submission_behavior", "redirect_behavior", "current_distribution"]
+    },
+    {
+      "case_id": "B",
+      "expected_band": "review_now",
+      "relative_order": "after_A",
+      "reason": "Two distinct, very recent source reports warrant urgent verification; reachability and page behavior are not yet checked.",
+      "still_unknown": ["page_capture", "page_reachability", "form_submission_behavior"]
+    },
+    {
+      "case_id": "C",
+      "expected_band": "review_today",
+      "relative_order": "not_decided",
+      "reason": "One unverified report warrants same-day review in the approved example.",
+      "still_unknown": ["page_capture", "page_reachability", "form_submission_behavior"]
+    },
+    {
+      "case_id": "D",
+      "expected_band": "review_today",
+      "relative_order": "not_decided",
+      "reason": "An older suspicious capture and a newer valid negative check for the exact page are both retained; current exposure remains unresolved.",
+      "still_unknown": ["current_distribution", "other_paths_or_vantages"]
+    },
+    {
+      "case_id": "E",
+      "expected_band": "review_today",
+      "relative_order": "not_decided",
+      "reason": "One report warrants same-day review. The timed-out check has no usable page result, so the analyst should diagnose the failure and repeat an authorized check; location-based access remains a hypothesis.",
+      "still_unknown": ["timeout_cause", "page_reachability", "page_capture", "form_submission_behavior"]
+    }
+  ],
+  "cross_case_expectations": [
+    "A and B both remain in review_now, with A ahead of B.",
+    "B has two preserved source reports but one investigation case.",
+    "D retains both the older positive capture description and the newer negative reachability observation.",
+    "E's timeout must never be interpreted as checked_not_found.",
+    "E remains review_today until new evidence changes current exposure; a suspected geographic restriction is not treated as a finding.",
+    "No case is automatically labeled confirmed credential harvesting."
+  ]
+}

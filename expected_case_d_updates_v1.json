@@ -1,0 +1,34 @@
+{
+  "scenario_id": "case-d-later-observation-v1",
+  "purpose": "Human-approved expected outcomes for alternative later observations. This file is not ranking-engine input.",
+  "baseline": {
+    "case_id": "D",
+    "as_of": "2026-09-30T10:00:00+03:00",
+    "expected_band": "review_today",
+    "existing_observation_ids": ["O-D-CAPTURE", "O-D-REACH"]
+  },
+  "branch_expectations": [
+    {
+      "branch_id": "dns_only",
+      "as_of": "2026-09-30T11:10:00+03:00",
+      "expected_band": "review_today",
+      "reason": "The hostname resolved, but there is no new observation of a reachable lookalike page or a redirect to one.",
+      "preserve_observation_ids": ["O-D-CAPTURE", "O-D-REACH", "O-D-DNS-LATER"],
+      "still_unknown": ["current_suspicious_page", "form_submission_behavior", "distribution_scale"]
+    },
+    {
+      "branch_id": "redirect_to_lookalike",
+      "as_of": "2026-09-30T11:10:00+03:00",
+      "expected_band": "review_now",
+      "reason": "A later fictional observation documents the exact path redirecting to a newly captured brand-lookalike login page, supporting current potential exposure.",
+      "preserve_observation_ids": ["O-D-CAPTURE", "O-D-REACH", "O-D-REDIRECT-LATER"],
+      "still_unknown": ["form_submission_behavior", "credential_collection", "victim_impact", "distribution_scale", "reason_for_change"]
+    }
+  ],
+  "cross_branch_expectations": [
+    "The branches are alternatives and are never combined as if both happened.",
+    "The earlier capture and 404 observation remain visible in either branch.",
+    "A new recommendation cites the new observation and the policy version; the prior recommendation remains in the audit trail.",
+    "Neither branch automatically claims confirmed credential harvesting or intentional evasion."
+  ]
+}
