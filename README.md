@@ -1,6 +1,6 @@
 # CedarPay — Explainable Phishing Triage (synthetic portfolio)
 
-**Status:** Synthetic local prototype. Alex completed the original six-step browser walkthrough on 3 October 2026 and confirmed the later reassessment page's requested elements on 4 October 2026. Public release awaits a hosting choice and final public URL check.
+**Status:** Public synthetic portfolio. Alex completed the original six-step browser walkthrough on 3 October 2026 and confirmed the later reassessment page's requested elements on 4 October 2026. [Open the live investigation demo](https://alexak29.github.io/cedarpay-phishing-triage/).
 
 ## The decision
 
@@ -71,4 +71,4 @@ The Python programs use only the standard library. Node is needed only for the l
 
 All names, reports, recipients, times, and `.example` URLs are fictional. The prototype does **not** fetch a page, use a VPN or proxy, ingest real messages, prove phishing, submit a form, or initiate a takedown. Its 15/30-minute demo windows and the B+ distribution signal are fixture settings, not calibrated operational thresholds. The local snapshots preserve the demonstrated history, but this prototype has no write-once database or enforced immutable audit store. There is no general aging rule, distribution cutoff, Normal queue policy, or measured detection accuracy yet.
 
-This project is intended to show evidence handling and analyst judgment, including what remains unknown. Alex reviewed the original three scenarios locally, confirmed the reassessment continuation's requested elements, and approved the contribution wording. The synthetic-only package has passed local release checks; publication and verification of a public URL are still pending.
+This project is intended to show evidence handling and analyst judgment, including what remains unknown. Alex reviewed the original three scenarios locally, confirmed the reassessment continuation's requested elements, and approved the contribution wording. The synthetic-only package passed local release checks and is published through GitHub Pages.
